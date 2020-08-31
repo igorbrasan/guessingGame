@@ -10,6 +10,20 @@
   </head>
   <body>
     <h1>Guessing game</h1>
+
+    <div>
+        <form action="" method="get">
+        <select name="gamemode" required="required" id="gamemode">
+          <option  disabled="disabled" value="" selected="selected">--Select item--</option>
+          <option value="fácil">Easy</option>
+          <option value="hard">Hard</option>
+        </select>
+        <button type="submit" onclick="setDificulty()">Set</button>
+        </form>
+        <button onclick="game()">Play</button>
+
+    </div>
+
     <script src="game.js"></script>
   </body>
 </html>
