@@ -1,20 +1,23 @@
-var magicNumber = 0 //=  55 getRandomInt(min, max);  <- uncomment this for HARD hode.
 const body = document.querySelector('body');
 
 function cheatGame(){ // here, I know you want to cheat.
     console.log(`Oh, you little cheater... Ok then, the number is ${magicNumber}! Have fun, I guess`); 
 }
 
-function setDificulty(){
+    var magicNumber = function(){
     let value = document.querySelector('#gamemode').value;
     if(value === 'easy'){
-        magicNumber =  55;
-        alert(`your dificulty is ${value}, and magic number is ${magicNumber}`);
-    }else if(value === 'hard'){
-        magicNumber = getRandomInt(1, 100);
-        alert(`your dificulty is ${value}, and magic number is ${magicNumber}`);
+        return getRandomInt(1, 10);
+       // alert(`your dificulty is ${value}. Try guessing my number, between 1 and 10!`);
+    }else if(value === 'medium'){
+        return getRandomInt(1, 50);
+       // alert(`your dificulty is ${value}. Try guessing my number, between 1 and 50!`);
+    }else if(value == 'hard'){
+        return getRandomInt(1, 100);
+       // alert(`your dificulty is ${value}. Try guessing my number, between 1 and 100!`);
+
     }
-    
+ 
     
 }
 
@@ -26,7 +29,7 @@ function getRandomInt(min, max) { //gets a random interger to start the game
 
 
 function game(){
-    while (magicNumber != guess) {
+    while (true) {
         var guess = Number(prompt('Tente adivinhar o número!'))
         var counter= 0
         if (magicNumber == guess) {

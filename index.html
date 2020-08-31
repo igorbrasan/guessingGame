@@ -12,13 +12,14 @@
     <h1>Guessing game</h1>
 
     <div>
-        <form action="" method="get">
+        <form action="" method="POST">
         <select name="gamemode" required="required" id="gamemode">
           <option  disabled="disabled" value="" selected="selected">--Select item--</option>
-          <option value="fácil">Easy</option>
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
           <option value="hard">Hard</option>
         </select>
-        <button type="submit" onclick="setDificulty()">Set</button>
+        <button type="submit" onclick="magicNumber()">Set</button>
         </form>
         <button onclick="game()">Play</button>
 
